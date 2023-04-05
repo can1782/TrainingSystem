@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateways", "Gateways", "{E9A4CB57-A712-4D2E-85BE-464B764405A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{AF9FD285-B303-418C-AAD0-B385C2ABA042}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{74B94E32-9C1E-4187-8E15-8B0B41409CB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Training", "Training", "{FC2C59A3-0DC9-431F-8B02-957C1B760D8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrainingSystem.Services.Training", "Services\Training\TrainingSystem.Services.Training\TrainingSystem.Services.Training.csproj", "{FF7158B9-4C08-4E8D-8D21-76988DFB4133}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF7158B9-4C08-4E8D-8D21-76988DFB4133}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7158B9-4C08-4E8D-8D21-76988DFB4133}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7158B9-4C08-4E8D-8D21-76988DFB4133}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7158B9-4C08-4E8D-8D21-76988DFB4133}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FC2C59A3-0DC9-431F-8B02-957C1B760D8F} = {AF9FD285-B303-418C-AAD0-B385C2ABA042}
+		{FF7158B9-4C08-4E8D-8D21-76988DFB4133} = {FC2C59A3-0DC9-431F-8B02-957C1B760D8F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {69FAD691-8E6C-4B62-B144-B9BB2B004A7B}
+	EndGlobalSection
+EndGlobal
