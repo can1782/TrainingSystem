@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
+using TrainingSystem.Services.Training.Models;
 using TrainingSystem.Shared.Dtos;
 
 namespace TrainingSystem.Services.Training.Services
@@ -21,9 +22,16 @@ namespace TrainingSystem.Services.Training.Services
 
             _dbConnection = new NpgsqlConnection(_configuration.GetConnectionString("PostgreSql"));
         }
-        public Task<Response<NoContent>> Delete(int id)
+        public async Task<Response<NoContent>> Delete(int id)
         {
-            throw new System.NotImplementedException();
+            var status = await _dbConnection.ExecuteAsync("delete from training where id= @Id", new { Id =id});
+
+            if (status > 0)
+            {
+                return Response<NoContent>.Success(204);
+            }
+
+            return Response<NoContent>.Fail("Training not found", 500);
         }
 
         public async Task<Response<List<Models.Training>>> GetAll()
@@ -66,7 +74,7 @@ namespace TrainingSystem.Services.Training.Services
                 return Response<NoContent>.Success(204);
             }
 
-            return Response<NoContent>.Fail("An error occured while updating", 500);
+            return Response<NoContent>.Fail("Training not found", 404);
         }
     }
 }
